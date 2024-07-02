@@ -53,19 +53,22 @@ async function loadBooks() {
         const li = document.createElement('li');
         li.textContent = `${book.title} by ${book.author}`;
         li.dataset.id = book._id;
+        li.classList.add('px2');
         
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
+        editButton.classList.add('btn', 'btn-primary', 'ms-2');
         editButton.addEventListener('click', () =>{
             bookId.value = book._id;
             title.value = book.title;
             author.value = book.author;
-            publishedDate.value = new Date(book.publisedDate).toISOString().split('T')[0];
+            publishedDate.value = new Date(book.publishedDate).toISOString().split('T')[0];
             pages.value = book.pages;
         });
         
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger', 'ms-2');
         deleteButton.addEventListener('click', async () => {
             await fetch(`${apiUrl}/${book._id}`, {
                 method: 'DELETE'

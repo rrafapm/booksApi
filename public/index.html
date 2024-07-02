@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Management</title>
+    <link rel="stylesheet" href="superhero.css">
 </head>
 <body>
     <h1>Book Management</h1>
-
-    <form id="book-form">
-        <input type="hidden" id="book-id">
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title" required><br>
-        <label for="author">Author:</label>
-        <input type="text" name="author" id="author" required><br>
-        <label for="publishedDate">Published Date:</label>
-        <input type="date" name="publishedDate" id="publishedDate" required><br>
-        <label for="pages">Pages:</label>
-        <input type="text" name="pages" id="pages" required><br>
-        <button type="submit">Save</button>
-    </form>
+    <div class="container">
+        <form id="book-form">
+            <input type="hidden" id="book-id" class="form-control">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" name="title" id="title" required class="form-control"><br>
+            <label for="author" class="form-label">Author:</label>
+            <input type="text" name="author" id="author" required class="form-control"><br>
+            <label for="publishedDate" class="form-label">Published Date:</label>
+            <input type="date" name="publishedDate" id="publishedDate" required class="form-control"><br>
+            <label for="pages" class="form-label">Pages:</label>
+            <input type="text" name="pages" id="pages" required class="form-control"><br>
+            <button type="submit" class="btn">Save</button>
+        </form>
+    </div>
 
     <h2>Books</h2>
-    <ul id="book-list"></ul>
+    <ul id="book-list" class="container"></ul>
 
     <script src="script.js"></script>
 </body>
