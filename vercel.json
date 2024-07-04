@@ -9,7 +9,7 @@
     "routes": [
         {   
             "src":"/api/books/(.*)",
-            "dest": "routes/bookRoutes.js"
+            "dest": "/routes/bookRoutes.js"
         }
     ]
 }
