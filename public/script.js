@@ -57,7 +57,7 @@ async function loadBooks() {
         
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
-        editButton.classList.add('btn', 'btn-primary', 'ms-2');
+        editButton.classList.add('btn', 'btn-outlined-primary', 'ms-2');
         editButton.addEventListener('click', () =>{
             bookId.value = book._id;
             title.value = book.title;
@@ -68,7 +68,7 @@ async function loadBooks() {
         
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.classList.add('btn', 'btn-danger', 'ms-2');
+        deleteButton.classList.add('btn', 'btn-outlined-danger', 'ms-2');
         deleteButton.addEventListener('click', async () => {
             await fetch(`${apiUrl}/${book._id}`, {
                 method: 'DELETE'
