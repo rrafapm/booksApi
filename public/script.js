@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const publishedDate = document.getElementById('publishedDate');
     const pages = document.getElementById('pages');
 
-    const apiUrl = 'https://books-api-tau.vercel.app/api/books/';
+    const apiUrl = 'https://books-api-tau.vercel.app/api/books';
 
     bookForm.addEventListener('submit', async (event) => {
         event.preventDefault();
