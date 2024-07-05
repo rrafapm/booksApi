@@ -15,7 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/api', bookRoutes);
 
-app.use(express.static(path.join(__driname, '../public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (res, req) => {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
